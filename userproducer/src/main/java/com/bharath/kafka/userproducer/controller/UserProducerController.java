@@ -19,7 +19,8 @@ public class UserProducerController {
 
     @PostMapping("publishuserdata/{name}/{age}")
     public void sendUserData(@PathVariable String name,@PathVariable int age) {
+        // Send Key and Data
         userProducerSrv.sendUserData(name,age);
-        log.info("#######  send name:{},age:{} #####",name,age);
+        log.info("#######  send key={} - data={} #####",name,age);
     }
 }
