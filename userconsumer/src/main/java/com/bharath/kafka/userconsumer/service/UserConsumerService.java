@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class UserConsumerService {
 
     @KafkaListener(topics = {"user-data-topic"})
-    public void consumeData(String name, int age) {
-        log.info("received data from Kafka: name-{},age-{}",name,age);
+    public void consumeData(int age) {
+        log.info("received data from Kafka: age={}",age);
     }
 }
